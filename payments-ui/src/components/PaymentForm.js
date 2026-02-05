@@ -12,7 +12,7 @@ import axios from "axios";
 import PaymentCard from "./PaymentCard";
 import "./PaymentForm.css";
 
-const stripePromise = loadStripe("pk_test_51SIpcrPPrWuEeyvEyNKtZmC6S5MfxlySMlH5xIIdfg2TXOVB3EBmD89T9JLVP4E2C0EztAd2xOXOwGEYx3AlJgEh00DeQwzUgm");
+const stripePromise = loadStripe("__publickey__");
 
 const elementStyle = {
     style: {
