@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+
+# .NET
+bin/
+obj/
+
+# Node / React
+node_modules/
+.env
+build/
+
+# OS files
+.DS_Store

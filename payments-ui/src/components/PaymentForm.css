@@ -1,0 +1,312 @@
+.payment-container {
+  background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #4de1ff;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.payment-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  color: #bbb;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  background-color: #1f1b2e;
+  color: white;
+}
+
+.stripe-input {
+  background-color: #1f1b2e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.small {
+  width: 150px;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  background: linear-gradient(90deg, #7928ca, #ff0080);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.card-preview {
+  background: radial-gradient(circle at top right, #0a0629, #1b1441);
+  width: 350px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, #b388ff, #4de1ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.card-number {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #ddd;
+}
+
+.message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* === Card Preview (flip + glow) === */
+
+.card-preview-wrapper {
+  perspective: 1000px;
+  width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-flip {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* FRONT SIDE */
+.card-front {
+  background: radial-gradient(circle at top left, #1b1030, #24123a);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(123, 97, 255, 0.3), transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, #b388ff, #4de1ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-chip {
+  width: 50px;
+  height: 34px;
+  background: linear-gradient(90deg, #ffdf85, #c98c0c);
+  border-radius: 6px;
+}
+
+.card-number-display {
+  font-family: "Courier New", monospace;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  margin: 20px 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #cfcbd6;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* BACK SIDE */
+.card-back {
+  background: linear-gradient(180deg, #0f071f, #24123a);
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.magstripe {
+  width: 100%;
+  height: 40px;
+  background: #000;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.cvv-box {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  height: 38px;
+  border-radius: 4px;
+  margin: 40px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.cvv-label {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-right: 25px;
+}
+
+/* Button under card */
+.view-cvv-btn {
+  margin-top: 15px;
+  border: none;
+  background: transparent;
+  color: #bcd7ff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* === Encryption Info Block === */
+.encryption-block {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 20px;
+  width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 15px rgba(123, 97, 255, 0.1);
+}
+
+.enc-icon {
+  font-size: 1.8rem;
+}
+
+.enc-text {
+  text-align: left;
+}
+
+.enc-title {
+  font-weight: 600;
+  color: #4de1ff;
+  font-size: 1rem;
+}
+
+.enc-sub {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+
